@@ -1,0 +1,34 @@
+@startuml R+V Anwendungslandschaft ./src/components 
+package "components"  {
+    class Ad
+    class CustomAutoSizer
+    class Filters
+    class Grouping
+    class HomePage
+    class HomePageContainer
+    class PresetsContainer
+    class Sorting
+    
+    package "BigPicture" {
+        class MainLandscapeContentContainer
+        class ExtraLandscapeContentContainer
+        class SwitchButtonContainer
+        class ZoomButtonsContainer
+        class FullscreenButtonContainer
+    }
+
+    HomePageContainer --> HomePage
+    HomePage --> Ad
+    HomePage --> CustomAutoSizer
+    HomePage --> Filters
+    HomePage --> Grouping
+    HomePage --> PresetsContainer
+    HomePage --> Sorting
+    HomePage --> MainLandscapeContentContainer
+    HomePage --> ExtraLandscapeContentContainer
+    SwitchHomePage --> ButtonContainer
+    HomePage --> ZoomButtonsContainer
+    HomePage --> FullscreenButtonContainer
+}
+
+@enduml
