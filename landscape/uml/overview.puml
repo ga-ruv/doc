@@ -1,0 +1,49 @@
+@startuml
+left to right direction
+header R+V Anwendungslandschaft
+package "landscapeapp"  {
+    package "src" {
+
+    }
+
+    package "tools" {
+
+    }
+
+    package "specs"{
+
+    }
+
+    package "update_server" {
+
+    }
+
+    package "UML" {
+    }
+
+    object ttg.sh {
+        ttg.sh <output> <color> <w>x<h> <ascii-textfile>
+    }
+
+    object build.sh {
+        clones and builds $1  <-- repo from github of the app
+        clones $2 <-- repo from github of the landscape
+    }
+
+    object full_build.sh {
+        first call 
+            $1 : LFDLFoundation/lfdl-landscape
+            $2 : lfdl
+        second call
+            $1 : cncf/landscape
+            $2 : cncf
+        updateGitVersion()
+    }
+
+    full_build.sh --> build.sh : executes
+
+}
+center footer general project layout
+
+
+@enduml

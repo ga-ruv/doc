@@ -1,0 +1,89 @@
+@startuml
+'allow_mixing
+left to right direction
+scale max 900*900
+header R+V Anwendungslandschaft ./src/
+
+node "landscape app project" {
+    package "components"  {
+        class "App"
+        class "HomePage"
+        class "HomePageContainer"
+        class "NotFoundPage"
+        class "Root"
+
+        Root --> App
+        App --> HomePageContainer
+        App --> NotFoundPage
+        HomePageContainer --> HomePage
+
+        note top of App
+            Main Application
+        end note
+    }
+    package "images" {
+    }
+    package "reducers" {
+        class "api"
+        class "bus"
+        class "index"
+        class "mainReducer"
+        index --> mainReducer
+    }
+    package "store" {
+        class "configureStore"
+    }
+    package "styles" {
+        class "theme" 
+    }
+    package "types" {
+    }
+    package "utils" {
+        class "createSelector"
+        class "csvExporter"
+        class "isEmbed"
+        class "isIphone"
+        class "itemsCalculator"
+        class "selectedItemCalculator"
+        class "syncToUrl"
+        class "zoom"
+    }
+    class "index.js" #DDDDDD
+    note left of index.js 
+        Dies ist der Einstieg
+    end note
+
+    index.js --> configureStore
+    index.js --> Root
+    index.js --> mainReducer
+    index.js --> theme
+    index.js --> isIphone
+
+    HomePageContainer --> createSelector
+    HomePageContainer --> mainReducer
+    HomePageContainer --> isEmbed
+    HomePageContainer --> itemsCalculator
+    HomePageContainer --> selectedItemCalculator
+}
+
+node "landscape project" {
+    database "data.json" {
+
+    }
+    database "settings.yml" {
+
+    }
+}
+
+api --> data.json
+mainReducer --> api
+mainReducer --> bus
+mainReducer --> syncToUrl
+mainReducer --> zoom
+mainReducer --> itemsCalculator
+mainReducer --> csvExporter
+mainReducer --> settings.yml
+index.js --> settings.yml
+App --> settings.yml
+HomePageContainer --> settings.yml
+@enduml
