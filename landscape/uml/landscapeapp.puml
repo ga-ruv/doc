@@ -2,7 +2,18 @@
 left to right direction
 header R+V Anwendungslandschaft
 scale max 1700*1200
-package landscapeapp {
+allow_mixing
+node fromon2csv {
+	node lib {
+		database JSON2CSVParser
+	}
+}		
+node project {
+		database lookupon
+		database previewon
+		database settings.yml
+}
+node landscapeapp {
 	package tools {
 		class fundingHistoryData
 		}
@@ -161,410 +172,525 @@ package landscapeapp {
 		package types {
 			class index
 			}
+	}
 	package src {
 		package types {
 			class fields
 			}
+	}
 	package src {
 		class iframeResizer
-		}
+	}
 	package src {
 		package components {
 			class ResetFilters
-			}
+		}
+	}
 	package src {
 		package components {
 			class Grouping
-			}
+		}
+	}
 	package src {
 		package components {
 			class ComboboxMultiSelector
-			}
+		}
+	}
 	package src {
 		package components {
 			class ExportCsv
+			}
 			}
 	package src {
 		package components {
 			class Note
 			}
+			}
 	package src {
 		package components {
 			class PresetsContainer
+			}
 			}
 	package src {
 		package components {
 			class ExportCsvContainer
 			}
+			}
 	package src {
 		package components {
 			class GroupingTypeContainer
+			}
 			}
 	package src {
 		package components {
 			class TweetButton
 			}
+			}
 	package src {
 		package components {
 			class HomePageScrollerContainer
+			}
 			}
 	package src {
 		package components {
 			class LandscapeSelector
 			}
+			}
 	package src {
 		package components {
 			class InternalLink
+			}
 			}
 	package src {
 		package components {
 			class HomePageContainer
 			}
+			}
 	package src {
 		package components {
 			class SortFieldSelector
+			}
 			}
 	package src {
 		package components {
 			class Sorting
 			}
+			}
 	package src {
 		package components {
 			class DelayRender
+			}
 			}
 	package src {
 		package components {
 			class EmbeddedFooter
 			}
+			}
 	package src {
 		package components {
 			class RadioSelector
+			}
 			}
 	package src {
 		package components {
 			class Ad
 			}
+			}
 	package src {
 		package components {
 			class ComboboxSelector
+			}
 			}
 	package src {
 		package components {
 			class Footer
 			}
+			}
 	package src {
 		package components {
 			class HeadquartersFilterContainer
+			}
 			}
 	package src {
 		package components {
 			class ResetFiltersContainer
 			}
+			}
 	package src {
 		package components {
 			class OrganizationFilterContainer
+			}
 			}
 	package src {
 		package components {
 			class Root
 			}
+			}
 	package src {
 		package components {
 			class ItemDialogContent
+			}
 			}
 	package src {
 		package components {
 			class HomePage
 			}
+			}
 	package src {
 		package components {
 			class NotFoundPage
+			}
 			}
 	package src {
 		package components {
 			class SortFieldContainer
 			}
+			}
 	package src {
 		package components {
 			class TreeSelector
+			}
 			}
 	package src {
 		package components {
 			class Filters
 			}
+			}
 	package src {
 		package components {
 			class HeaderContainer
+			}
 			}
 	package src {
 		package components {
 			class ItemDialogButtonsContainer
 			}
+			}
 	package src {
 		package components {
 			class CheckboxSelector
+			}
 			}
 	package src {
 		package components {
 			class MainContent
 			}
+			}
 	package src {
 		package components {
 			class LicenseFilterContainer
+			}
 			}
 	package src {
 		package components {
 			class Presets
 			}
+			}
 	package src {
 		package components {
 			class HomePageUrlContainer
+			}
 			}
 	package src {
 		package components {
 			class LandscapeFilterContainer
 			}
+			}
 	package src {
 		package components {
 			class CustomAutoSizer
+			}
 			}
 	package src {
 		package components {
 			class App
 			}
+			}
 	package src {
 		package components {
 			class Summary
+			}
 			}
 	package src {
 		package components {
 			class Header
 			}
+			}
 	package src {
 		package components {
 			class ProjectFilterContainer
+			}
 			}
 	package src {
 		package components {
 			class ItemDialog
 			}
+			}
 	package src {
 		package components {
 			class MainContentContainer
+			}
 			}
 	package src {
 		package components {
 			class GroupingSelector
 			}
+			}
 	package src {
 		package components {
 			class ItemDialogContainer
+			}
 			}
 	package src {
 		package components {
 			package BigPicture {
 				class FullscreenLandscape
 				}
+				}
+				}
 	package src {
 		package components {
 			package BigPicture {
 				class ZoomButtonsContainer
+				}
+				}
 				}
 	package src {
 		package components {
 			package BigPicture {
 				class ExtraLandscapeContentContainer
 				}
+				}
+				}
 	package src {
 		package components {
 			package BigPicture {
 				class LandscapeInfo
+				}
+				}
 				}
 	package src {
 		package components {
 			package BigPicture {
 				class FullscreenButton
 				}
+				}
+				}
 	package src {
 		package components {
 			package BigPicture {
 				class OtherLandscapeLink
+				}
+				}
 				}
 	package src {
 		package components {
 			package BigPicture {
 				class Zoom
 				}
+				}
+				}
 	package src {
 		package components {
 			package BigPicture {
 				class SwitchButton
+				}
+				}
 				}
 	package src {
 		package components {
 			package BigPicture {
 				class ZoomContainer
 				}
+				}
+				}
 	package src {
 		package components {
 			package BigPicture {
 				class MainFullscreenLandscapeContainer
+				}
+				}
 				}
 	package src {
 		package components {
 			package BigPicture {
 				class SwitchButtonContainer
 				}
+				}
+				}
 	package src {
 		package components {
 			package BigPicture {
 				class ZoomButtons
+				}
+				}
 				}
 	package src {
 		package components {
 			package BigPicture {
 				class FullscreenButtonContainer
 				}
+				}
+				}
 	package src {
 		package components {
 			package BigPicture {
 				class index
+				}
+				}
 				}
 	package src {
 		package components {
 			package BigPicture {
 				class ExtraFullscreenLandscapeContainer
 				}
+				}
+				}
 	package src {
 		package components {
 			package BigPicture {
 				class Elements
+				}
+				}
 				}
 	package src {
 		package components {
 			package BigPicture {
 				class LandscapeContent
 				}
+				}
+				}
 	package src {
 		package components {
 			package BigPicture {
 				class MainLandscapeContentContainer
 				}
+				}
+				}
 	package src {
 		package components {
 			class ItemDialogButtons
+			}
 			}
 	package src {
 		package components {
 			class OssFilterContainer
 			}
+			}
 	package src {
 		package components {
 			class SummaryContainer
+			}
 			}
 	package src {
 		package reducers {
 			class api
 			}
+			}
 	package src {
 		package reducers {
 			class bus
+			}
 			}
 	package src {
 		package reducers {
 			class mainReducer
 			}
+			}
 	package src {
 		package reducers {
 			class index
+			}
 			}
 	package src {
 		package utils {
 			class unpackArray
 			}
+			}
 	package src {
 		package utils {
 			class saneName
+			}
 			}
 	package src {
 		package utils {
 			class isDesktop
 			}
+			}
 	package src {
 		package utils {
 			class groupingLabel
+			}
 			}
 	package src {
 		package utils {
 			class groupingOrder
 			}
+			}
 	package src {
 		package utils {
 			class formatNumber
+			}
 			}
 	package src {
 		package utils {
 			class createSelector
 			}
+			}
 	package src {
 		package utils {
 			class summaryCalculator
+			}
 			}
 	package src {
 		package utils {
 			class itemsCalculator
 			}
+			}
 	package src {
 		package utils {
 			class isMobile
+			}
 			}
 	package src {
 		package utils {
 			class selectedItemCalculator
 			}
+			}
 	package src {
 		package utils {
 			class packArray
+			}
 			}
 	package src {
 		package utils {
 			class isEmbed
 			}
+			}
 	package src {
 		package utils {
 			class zoom
+			}
 			}
 	package src {
 		package utils {
 			class shortRepoName
 			}
+			}
 	package src {
 		package utils {
 			class isIphone
+			}
 			}
 	package src {
 		package utils {
 			class stringOrSpecial
 			}
+			}
 	package src {
 		package utils {
 			class formatAmount
+			}
 			}
 	package src {
 		package utils {
 			class csvExporter
 			}
+			}
 	package src {
 		package utils {
 			class formatCity
+			}
 			}
 	package src {
 		package utils {
 			class isGoogle
 			}
+			}
 	package src {
 		package utils {
 			class syncToUrl
+			}
 			}
 	package src {
 		class index
@@ -576,281 +702,305 @@ package landscapeapp {
 		package store {
 			class configureStore
 			}
+			}
 	class webpack.config.dev
-		checkLinks ..> retry
-		checkLinks ..> settings
-		sitemap ..> settings
-		testGithub ..> githubDates
-		renderLandscape ..> settings
-		validateLandscapeKeys ..> settings
-		srcServer ..> webpack.config.dev
-		srcServer ..> settings
-		analyzeBundle ..> webpack.config.prod
-		fetchGithubStartDate ..> fatalErrors
-		fetchGithubStartDate ..> settings
-		fetchGithubStartDate ..> reporter
-		fetchGithubStartDate ..> getRepositoryInfo
-		fetchGithubStartDate ..> progressReporter
-		fetchGithubStartDate ..> githubDates
-		fetchImages ..> fatalErrors
-		fetchImages ..> rpRetry
-		fetchImages ..> saneName
-		fetchImages ..> settings
-		fetchImages ..> progressReporter
-		fetchImages ..> reporter
-		startMessage ..> chalkConfig
-		fetchGithubStats ..> fatalErrors
-		fetchGithubStats ..> rpRetry
-		fetchGithubStats ..> reporter
-		fetchGithubStats ..> settings
-		fetchGithubStats ..> progressReporter
-		fetchGithubStats ..> shortRepoName
-		fetchGithubStats ..> getRepositoryInfo
-		fetchGithubStats ..> githubDates
-		testCropFrame ..> processSvg
-		autocropImages ..> settings
-		removeQuotes ..> settings
-		removeQuotes ..> yaml
-		hostImages ..> settings
-		hostImages ..> fetchImages
-		hostImages ..> yaml
-		setupServer ..> settings
-		twitter ..> fatalErrors
-		twitter ..> settings
-		twitter ..> reporter
-		twitter ..> actualTwitter
-		twitter ..> twitterClient
-		twitter ..> retry
-		twitter ..> progressReporter
-		distServer ..> chalkConfig
-		distServer ..> settings
-		calculateNumberOfTweets ..> twitterClient
-		calculateNumberOfTweets ..> settings
-		calculateNumberOfTweets ..> yaml
-		githubDates ..> rpRetry
-		removeUnusedHostedLogos ..> settings
-		getRepositoryInfo ..> shortRepoName
-		getRepositoryInfo ..> rpRetry
-		rpRetry ..> retry
-		crunchbase ..> fatalErrors
-		crunchbase ..> ensureHttps
-		crunchbase ..> reporter
-		crunchbase ..> settings
-		crunchbase ..> progressReporter
-		addExternalInfo ..> fatalErrors
-		addExternalInfo ..> settings
-		addExternalInfo ..> actualTwitter
-		addExternalInfo ..> yaml
-		addExternalInfo ..> fetchImages
-		addExternalInfo ..> crunchbase
-		addExternalInfo ..> fetchGithubStats
-		addExternalInfo ..> fetchGithubStartDate
-		addExternalInfo ..> twitter
-		addExternalInfo ..> fetchBestPractices
-		addExternalInfo ..> shortRepoName
-		debugCheckLinks ..> checkLinks
-		fetchBestPractices ..> fatalErrors
-		fetchBestPractices ..> retry
-		fetchBestPractices ..> reporter
-		fetchBestPractices ..> settings
-		fetchBestPractices ..> progressReporter
-		ciServer ..> chalkConfig
-		ciServer ..> settings
-		rpRetryTest ..> rpRetry
-		checkLandscape ..> settings
-		generateJson ..> settings
-		generateJson ..> actualTwitter
-		generateJson ..> saneName
-		generateJson ..> formatCity
-		generateJson ..> packArray
-		build ..> webpack.config.prod
-		build ..> chalkConfig
-		webpack.config.prod ..> settings
-		fields ..> unpackArray
-		Grouping ..> GroupingTypeContainer
-		PresetsContainer ..> createSelector
-		PresetsContainer ..> Presets
-		PresetsContainer ..> syncToUrl
-		ExportCsvContainer ..> ExportCsv
-		ExportCsvContainer ..> mainReducer
-		GroupingTypeContainer ..> GroupingSelector
-		GroupingTypeContainer ..> mainReducer
-		GroupingTypeContainer ..> fields
-		HomePageScrollerContainer ..> itemsCalculator
-		LandscapeSelector ..> TreeSelector
-		InternalLink ..> isEmbed
-		HomePageContainer ..> createSelector
-		HomePageContainer ..> HomePage
-		HomePageContainer ..> mainReducer
-		HomePageContainer ..> isEmbed
-		HomePageContainer ..> itemsCalculator
-		HomePageContainer ..> selectedItemCalculator
-		SortFieldSelector ..> ComboboxSelector
-		Sorting ..> SortFieldContainer
-		HeadquartersFilterContainer ..> TreeSelector
-		HeadquartersFilterContainer ..> mainReducer
-		HeadquartersFilterContainer ..> fields
-		ResetFiltersContainer ..> ResetFilters
-		ResetFiltersContainer ..> mainReducer
-		OrganizationFilterContainer ..> ComboboxMultiSelector
-		OrganizationFilterContainer ..> mainReducer
-		OrganizationFilterContainer ..> fields
-		Root ..> App
-		ItemDialogContent ..> syncToUrl
-		ItemDialogContent ..> formatNumber
-		ItemDialogContent ..> isMobile
-		ItemDialogContent ..> InternalLink
-		ItemDialogContent ..> fields
-		ItemDialogContent ..> isGoogle
-		ItemDialogContent ..> TweetButton
-		HomePage ..> Filters
-		HomePage ..> Grouping
-		HomePage ..> Sorting
-		HomePage ..> PresetsContainer
-		HomePage ..> Ad
-		HomePage ..> CustomAutoSizer
-		HomePage ..> TweetButton
-		HomePage ..> MainContentContainer
-		HomePage ..> HomePageUrlContainer
-		HomePage ..> HomePageScrollerContainer
-		HomePage ..> ResetFiltersContainer
-		HomePage ..> ItemDialogContainer
-		HomePage ..> ItemDialogButtonsContainer
-		HomePage ..> HeaderContainer
-		HomePage ..> SummaryContainer
-		HomePage ..> ExportCsvContainer
-		HomePage ..> Footer
-		HomePage ..> EmbeddedFooter
-		HomePage ..> isIphone
-		HomePage ..> isMobile
-		HomePage ..> isDesktop
-		HomePage ..> isGoogle
-		HomePage ..> bus
-		HomePage ..> MainLandscapeContentContainer
-  		HomePage ..> ExtraLandscapeContentContainer
-  		HomePage ..> SwitchButtonContainer
-  		HomePage ..> ZoomButtonsContainer
-  		HomePage ..> FullscreenButtonContainer
-		SortFieldContainer ..> SortFieldSelector
-		SortFieldContainer ..> mainReducer
-		Filters ..> ProjectFilterContainer
-		Filters ..> LicenseFilterContainer
-		Filters ..> OrganizationFilterContainer
-		Filters ..> HeadquartersFilterContainer
-		Filters ..> LandscapeFilterContainer
-		Filters ..> fields
-		HeaderContainer ..> Header
-		HeaderContainer ..> mainReducer
-		ItemDialogButtonsContainer ..> createSelector
-		ItemDialogButtonsContainer ..> ItemDialogButtons
-		ItemDialogButtonsContainer ..> mainReducer
-		ItemDialogButtonsContainer ..> itemsCalculator
-		ItemDialogButtonsContainer ..> selectedItemCalculator
-		MainContent ..> InternalLink
-		MainContent ..> isEmbed
-		MainContent ..> isMobile
-		MainContent ..> DelayRender
-		MainContent ..> fields
-		LicenseFilterContainer ..> TreeSelector
-		LicenseFilterContainer ..> mainReducer
-		LicenseFilterContainer ..> fields
-		HomePageUrlContainer ..> createSelector
-		HomePageUrlContainer ..> syncToUrl
-		HomePageUrlContainer ..> mainReducer
-		HomePageUrlContainer ..> configureStore
-		LandscapeFilterContainer ..> LandscapeSelector
-		LandscapeFilterContainer ..> mainReducer
-		LandscapeFilterContainer ..> fields
-		CustomAutoSizer ..> isMobile
-		App ..> HomePageContainer
-		App ..> NotFoundPage
-		Summary ..> formatNumber
-		ProjectFilterContainer ..> TreeSelector
-		ProjectFilterContainer ..> mainReducer
-		ProjectFilterContainer ..> fields
-		ItemDialog ..> ItemDialogContent
-		ItemDialog ..> ItemDialogButtonsContainer
-		ItemDialog ..> isIphone
-		ItemDialog ..> fields
-		MainContentContainer ..> MainContent
-		MainContentContainer ..> mainReducer
-		MainContentContainer ..> itemsCalculator
-		GroupingSelector ..> ComboboxSelector
-		ItemDialogContainer ..> createSelector
-		ItemDialogContainer ..> ItemDialog
-		ItemDialogContainer ..> mainReducer
-		ItemDialogContainer ..> itemsCalculator
-		ItemDialogContainer ..> selectedItemCalculator
-		FullscreenLandscape ..> LandscapeContent
-		FullscreenLandscape ..> HomePageUrlContainer
-		ZoomButtonsContainer ..> ZoomButtons
-		ZoomButtonsContainer ..> mainReducer
-		ZoomButtonsContainer ..> zoom
-		ExtraLandscapeContentContainer ..> LandscapeContent
-		ExtraLandscapeContentContainer ..> mainReducer
-		ExtraLandscapeContentContainer ..> itemsCalculator
-		SwitchButton ..> InternalLink
-		SwitchButton ..> isEmbed
-		SwitchButton ..> TweetButton
-		ZoomContainer ..> Zoom
-		MainFullscreenLandscapeContainer ..> FullscreenLandscape
-		MainFullscreenLandscapeContainer ..> itemsCalculator
-		SwitchButtonContainer ..> SwitchButton
-		SwitchButtonContainer ..> mainReducer
-		SwitchButtonContainer ..> syncToUrl
-		FullscreenButtonContainer ..> FullscreenButton
-		FullscreenButtonContainer ..> mainReducer
-		index ..> MainLandscapeContentContainer
-		index ..> ExtraLandscapeContentContainer
-		index ..> SwitchButtonContainer
-		index ..> ZoomContainer
-		index ..> ZoomButtonsContainer
-		index ..> MainFullscreenLandscapeContainer
-		index ..> ExtraFullscreenLandscapeContainer
-		index ..> FullscreenButtonContainer
-		ExtraFullscreenLandscapeContainer ..> FullscreenLandscape
-		ExtraFullscreenLandscapeContainer ..> itemsCalculator
-		Elements ..> InternalLink
-		Elements ..> fields
-		LandscapeContent ..> Elements
-		LandscapeContent ..> LandscapeInfo
-		LandscapeContent ..> OtherLandscapeLink
-		MainLandscapeContentContainer ..> LandscapeContent
-		MainLandscapeContentContainer ..> mainReducer
-		MainLandscapeContentContainer ..> itemsCalculator
-		OssFilterContainer ..> ComboboxSelector
-		OssFilterContainer ..> mainReducer
-		OssFilterContainer ..> fields
-		SummaryContainer ..> Summary
-		SummaryContainer ..> summaryCalculator
-		api ..> unpackArray
-		mainReducer ..> api
-		mainReducer ..> syncToUrl
-		mainReducer ..> zoom
-		mainReducer ..> bus
-		mainReducer ..> itemsCalculator
-		mainReducer ..> csvExporter
-		index ..> mainReducer
-		groupingLabel ..> fields
-		groupingOrder ..> fields
-		summaryCalculator ..> createSelector
-		summaryCalculator ..> itemsCalculator
-		itemsCalculator ..> createSelector
-		itemsCalculator ..> fields
-		itemsCalculator ..> groupingLabel
-		itemsCalculator ..> groupingOrder
-		itemsCalculator ..> formatAmount
-		itemsCalculator ..> syncToUrl
-		itemsCalculator ..> stringOrSpecial
-		syncToUrl ..> mainReducer
-		syncToUrl ..> fields
-		syncToUrl ..> SortFieldContainer
-		syncToUrl ..> isEmbed
-		index ..> configureStore
-		index ..> Root
-		index ..> mainReducer
-		index ..> isIphone
-		configureStore ..> reducers
-		webpack.config.dev ..> settings
+	checkLinks ..> retry
+	checkLinks ..> settings
+	sitemap ..> settings
+	testGithub ..> githubDates
+	renderLandscape ..> settings
+	validateLandscapeKeys ..> settings
+	srcServer ..> webpack.config.dev
+	srcServer ..> settings
+	analyzeBundle ..> webpack.config.prod
+	fetchGithubStartDate ..> fatalErrors
+	fetchGithubStartDate ..> settings
+	fetchGithubStartDate ..> reporter
+	fetchGithubStartDate ..> getRepositoryInfo
+	fetchGithubStartDate ..> progressReporter
+	fetchGithubStartDate ..> githubDates
+	fetchImages ..> fatalErrors
+	fetchImages ..> rpRetry
+	fetchImages ..> saneName
+	fetchImages ..> settings
+	fetchImages ..> progressReporter
+	fetchImages ..> reporter
+	startMessage ..> chalkConfig
+	fetchGithubStats ..> fatalErrors
+	fetchGithubStats ..> rpRetry
+	fetchGithubStats ..> reporter
+	fetchGithubStats ..> settings
+	fetchGithubStats ..> progressReporter
+	fetchGithubStats ..> shortRepoName
+	fetchGithubStats ..> getRepositoryInfo
+	fetchGithubStats ..> githubDates
+	testCropFrame ..> processSvg
+	autocropImages ..> settings
+	removeQuotes ..> settings
+	removeQuotes ..> yaml
+	hostImages ..> settings
+	hostImages ..> fetchImages
+	hostImages ..> yaml
+	setupServer ..> settings
+	twitter ..> fatalErrors
+	twitter ..> settings
+	twitter ..> reporter
+	twitter ..> actualTwitter
+	twitter ..> twitterClient
+	twitter ..> retry
+	twitter ..> progressReporter
+	distServer ..> chalkConfig
+	distServer ..> settings
+	calculateNumberOfTweets ..> twitterClient
+	calculateNumberOfTweets ..> settings
+	calculateNumberOfTweets ..> yaml
+	githubDates ..> rpRetry
+	removeUnusedHostedLogos ..> settings
+	getRepositoryInfo ..> shortRepoName
+	getRepositoryInfo ..> rpRetry
+	rpRetry ..> retry
+	crunchbase ..> fatalErrors
+	crunchbase ..> ensureHttps
+	crunchbase ..> reporter
+	crunchbase ..> settings
+	crunchbase ..> progressReporter
+	addExternalInfo ..> fatalErrors
+	addExternalInfo ..> settings
+	addExternalInfo ..> actualTwitter
+	addExternalInfo ..> yaml
+	addExternalInfo ..> fetchImages
+	addExternalInfo ..> crunchbase
+	addExternalInfo ..> fetchGithubStats
+	addExternalInfo ..> fetchGithubStartDate
+	addExternalInfo ..> twitter
+	addExternalInfo ..> fetchBestPractices
+	addExternalInfo ..> shortRepoName
+	debugCheckLinks ..> checkLinks
+	fetchBestPractices ..> fatalErrors
+	fetchBestPractices ..> retry
+	fetchBestPractices ..> reporter
+	fetchBestPractices ..> settings
+	fetchBestPractices ..> progressReporter
+	ciServer ..> chalkConfig
+	ciServer ..> settings
+	rpRetryTest ..> rpRetry
+	checkLandscape ..> settings
+	generateJson ..> settings
+	generateJson ..> actualTwitter
+	generateJson ..> saneName
+	generateJson ..> formatCity
+	generateJson ..> packArray
+	build ..> webpack.config.prod
+	build ..> chalkConfig
+	webpack.config.prod ..> settings
+	fields ..> unpackArray
+	Grouping ..> GroupingTypeContainer
+	PresetsContainer ..> createSelector
+	PresetsContainer ..> Presets
+	PresetsContainer ..> syncToUrl
+	ExportCsvContainer ..> ExportCsv
+	ExportCsvContainer ..> mainReducer
+	GroupingTypeContainer ..> GroupingSelector
+	GroupingTypeContainer ..> mainReducer
+	GroupingTypeContainer ..> fields
+	HomePageScrollerContainer ..> itemsCalculator
+	LandscapeSelector ..> TreeSelector
+	InternalLink ..> isEmbed
+	HomePageContainer ..> createSelector
+	HomePageContainer ..> HomePage
+	HomePageContainer ..> mainReducer
+	HomePageContainer ..> isEmbed
+	HomePageContainer ..> itemsCalculator
+	HomePageContainer ..> selectedItemCalculator
+	SortFieldSelector ..> ComboboxSelector
+	Sorting ..> SortFieldContainer
+	HeadquartersFilterContainer ..> TreeSelector
+	HeadquartersFilterContainer ..> mainReducer
+	HeadquartersFilterContainer ..> fields
+	ResetFiltersContainer ..> ResetFilters
+	ResetFiltersContainer ..> mainReducer
+	OrganizationFilterContainer ..> ComboboxMultiSelector
+	OrganizationFilterContainer ..> mainReducer
+	OrganizationFilterContainer ..> fields
+	Root ..> App
+	ItemDialogContent ..> syncToUrl
+	ItemDialogContent ..> formatNumber
+	ItemDialogContent ..> isMobile
+	ItemDialogContent ..> InternalLink
+	ItemDialogContent ..> fields
+	ItemDialogContent ..> isGoogle
+	ItemDialogContent ..> TweetButton
+	HomePage ..> Filters
+	HomePage ..> Grouping
+	HomePage ..> Sorting
+	HomePage ..> PresetsContainer
+	HomePage ..> Ad
+	HomePage ..> CustomAutoSizer
+	HomePage ..> TweetButton
+	HomePage ..> MainContentContainer
+	HomePage ..> HomePageUrlContainer
+	HomePage ..> HomePageScrollerContainer
+	HomePage ..> ResetFiltersContainer
+	HomePage ..> ItemDialogContainer
+	HomePage ..> ItemDialogButtonsContainer
+	HomePage ..> HeaderContainer
+	HomePage ..> SummaryContainer
+	HomePage ..> ExportCsvContainer
+	HomePage ..> Footer
+	HomePage ..> EmbeddedFooter
+	HomePage ..> isIphone
+	HomePage ..> isMobile
+	HomePage ..> isDesktop
+	HomePage ..> isGoogle
+	HomePage ..> bus
+	HomePage ..> MainLandscapeContentContainer
+	HomePage ..> ExtraLandscapeContentContainer
+	HomePage ..> SwitchButtonContainer
+	HomePage ..> ZoomButtonsContainer
+	HomePage ..> FullscreenButtonContainer
+	SortFieldContainer ..> SortFieldSelector
+	SortFieldContainer ..> mainReducer
+	Filters ..> ProjectFilterContainer
+	Filters ..> LicenseFilterContainer
+	Filters ..> OrganizationFilterContainer
+	Filters ..> HeadquartersFilterContainer
+	Filters ..> LandscapeFilterContainer
+	Filters ..> fields
+	HeaderContainer ..> Header
+	HeaderContainer ..> mainReducer
+	ItemDialogButtonsContainer ..> createSelector
+	ItemDialogButtonsContainer ..> ItemDialogButtons
+	ItemDialogButtonsContainer ..> mainReducer
+	ItemDialogButtonsContainer ..> itemsCalculator
+	ItemDialogButtonsContainer ..> selectedItemCalculator
+	MainContent ..> InternalLink
+	MainContent ..> isEmbed
+	MainContent ..> isMobile
+	MainContent ..> DelayRender
+	MainContent ..> fields
+	LicenseFilterContainer ..> TreeSelector
+	LicenseFilterContainer ..> mainReducer
+	LicenseFilterContainer ..> fields
+	HomePageUrlContainer ..> createSelector
+	HomePageUrlContainer ..> syncToUrl
+	HomePageUrlContainer ..> mainReducer
+	HomePageUrlContainer ..> configureStore
+	LandscapeFilterContainer ..> LandscapeSelector
+	LandscapeFilterContainer ..> mainReducer
+	LandscapeFilterContainer ..> fields
+	CustomAutoSizer ..> isMobile
+	App ..> HomePageContainer
+	App ..> NotFoundPage
+	Summary ..> formatNumber
+	ProjectFilterContainer ..> TreeSelector
+	ProjectFilterContainer ..> mainReducer
+	ProjectFilterContainer ..> fields
+	ItemDialog ..> ItemDialogContent
+	ItemDialog ..> ItemDialogButtonsContainer
+	ItemDialog ..> isIphone
+	ItemDialog ..> fields
+	MainContentContainer ..> MainContent
+	MainContentContainer ..> mainReducer
+	MainContentContainer ..> itemsCalculator
+	GroupingSelector ..> ComboboxSelector
+	ItemDialogContainer ..> createSelector
+	ItemDialogContainer ..> ItemDialog
+	ItemDialogContainer ..> mainReducer
+	ItemDialogContainer ..> itemsCalculator
+	ItemDialogContainer ..> selectedItemCalculator
+	FullscreenLandscape ..> LandscapeContent
+	FullscreenLandscape ..> HomePageUrlContainer
+	ZoomButtonsContainer ..> ZoomButtons
+	ZoomButtonsContainer ..> mainReducer
+	ZoomButtonsContainer ..> zoom
+	ExtraLandscapeContentContainer ..> LandscapeContent
+	ExtraLandscapeContentContainer ..> mainReducer
+	ExtraLandscapeContentContainer ..> itemsCalculator
+	SwitchButton ..> InternalLink
+	SwitchButton ..> isEmbed
+	SwitchButton ..> TweetButton
+	ZoomContainer ..> Zoom
+	MainFullscreenLandscapeContainer ..> FullscreenLandscape
+	MainFullscreenLandscapeContainer ..> itemsCalculator
+	SwitchButtonContainer ..> SwitchButton
+	SwitchButtonContainer ..> mainReducer
+	SwitchButtonContainer ..> syncToUrl
+	FullscreenButtonContainer ..> FullscreenButton
+	FullscreenButtonContainer ..> mainReducer
+	index ..> MainLandscapeContentContainer
+	index ..> ExtraLandscapeContentContainer
+	index ..> SwitchButtonContainer
+	index ..> ZoomContainer
+	index ..> ZoomButtonsContainer
+	index ..> MainFullscreenLandscapeContainer
+	index ..> ExtraFullscreenLandscapeContainer
+	index ..> FullscreenButtonContainer
+	ExtraFullscreenLandscapeContainer ..> FullscreenLandscape
+	ExtraFullscreenLandscapeContainer ..> itemsCalculator
+	Elements ..> InternalLink
+	Elements ..> fields
+	LandscapeContent ..> Elements
+	LandscapeContent ..> LandscapeInfo
+	LandscapeContent ..> OtherLandscapeLink
+	MainLandscapeContentContainer ..> LandscapeContent
+	MainLandscapeContentContainer ..> mainReducer
+	MainLandscapeContentContainer ..> itemsCalculator
+	OssFilterContainer ..> ComboboxSelector
+	OssFilterContainer ..> mainReducer
+	OssFilterContainer ..> fields
+	SummaryContainer ..> Summary
+	SummaryContainer ..> summaryCalculator
+	api ..> unpackArray
+	mainReducer ..> api
+	mainReducer ..> syncToUrl
+	mainReducer ..> zoom
+	mainReducer ..> bus
+	mainReducer ..> itemsCalculator
+	mainReducer ..> csvExporter
+	index ..> mainReducer
+	groupingLabel ..> fields
+	groupingOrder ..> fields
+	summaryCalculator ..> createSelector
+	summaryCalculator ..> itemsCalculator
+	itemsCalculator ..> createSelector
+	itemsCalculator ..> fields
+	itemsCalculator ..> groupingLabel
+	itemsCalculator ..> groupingOrder
+	itemsCalculator ..> formatAmount
+	itemsCalculator ..> syncToUrl
+	itemsCalculator ..> stringOrSpecial
+	syncToUrl ..> mainReducer
+	syncToUrl ..> fields
+	syncToUrl ..> SortFieldContainer
+	syncToUrl ..> isEmbed
+	index ..> configureStore
+	index ..> Root
+	index ..> mainReducer
+	index ..> isIphone
+	configureStore ..> reducers
+	webpack.config.dev ..> settings
+
+	Ad .. settings.yml
+	App .. settings.yml
+	ExtraFullscreenLandscapeContainer .. settings.yml
+	ExtraLandscapeContentContainer  .. settings.yml
+	MainFullscreenLandscapeContainer .. settings.yml
+	MainLandscapeContentContainer .. settings.yml
+	SwitchButtonContainer .. settings.yml
+	Footer .. settings.yml
+	Header .. settings.yml
+	HomePageContainer .. settings.yml
+	HomePage .. settings.yml
+	ItemDialogContent .. settings.yml
+	PresetsContainer .. settings.yml
+	TweetButton .. settings.yml
+	index .. settings.yml
+	api .. previewon
+	mainReducer .. settings.yml
+	fields .. lookupon
+	fields .. settings.yml
+	csvExporter .. JSON2CSVParser
+	itemsCalculator .. settings.yml
+	syncToUrl .. settings.yml
 }
 @enduml

@@ -4,6 +4,8 @@ FIND='/usr/bin/find'
 GREP='/bin/grep'
 AWK='/usr/bin/awk'
 SED='/bin/sed'
+UNIQ='/usr/bin/uniq'
+SORT='/usr/bin/sort'
 EXDIRSTR=''
 
 # help text
@@ -56,14 +58,14 @@ if [ -n "$3" ] ; then
   >> "${1}.puml"
 fi
 
-echo `pwd` | $AWK '{n=split($0,a,"/"); print "package " a[n]" {";}' \
+echo `pwd` | $AWK '{n=split($0,a,"/"); print "node " a[n]" {";}' \
   >> "${1}.puml"
 
 # all classes and packages fom the *.js files starting in currentfolder including subdirectories
 $FIND . $EXDIRSTR -name '*.js' -print | \
   $SED 's/^[.\/]*//g' | \
   $SED 's/.js$//g' | \
-  $AWK '{n=split($0,a,"/"); tabs=""; for (i = 1; i <= n; i++) { tabs="\t"tabs; if(i<n) print tabs"package "a[i]" {"; else print tabs"class "a[i]; } if(n>1) print tabs"}";}' \
+  $AWK '{n=split($0,a,"/"); tabs=""; for (i = 1; i <= n; i++) { tabs="\t"tabs; if(i<n) print tabs"package "a[i]" {"; else print tabs"class "a[i]; } for(j=1; j<n; j++) print tabs"}";}' \
   >>  "${1}.puml"
 # add dependencies -- simple imports in one js line like: import Sorting from './Sorting'; 
 # DOES NOT handle 
@@ -81,6 +83,30 @@ $FIND . $EXDIRSTR -name '*.js' -exec grep -H 'import*' {} \; | \
   $SED "s/';$//g" | \
   $AWK '{n=split($1,a,"/"); m=split($(NF),b,"/"); if(a[n] != "") print "\t\t"a[n]" ..> "b[m];}' \
   >> "${1}.puml"
+
+# handle yml and json file imports...
+# add the databases
+$FIND . $EXDIRSTR -name '*.js' -exec grep -E "import[ a-zA-Z0-9/'.]*(yml|json)" {} \; | \
+  $SED -e "s/;$//g" -e "s/'$//g" -e "s/'//g" -e 's/:import//g' -e 's/.js//g' | \
+  $SORT | \
+  $AWK '{print $NF}' | \
+  $UNIQ | \
+  $SORT | \
+  $AWK '{n=split($NF, x, "/"); tabs=""; for (i=1; i<=n; i++) {tabs="\t"tabs; if(i<n) print tabs"node "x[i]" {"; else print tabs"database "x[i];} for(j=1; j<n; j++) print tabs"}";}' \
+  >> "${1}.puml"
+# add the usage *.js --> *.(json|yml)
+$FIND . $EXDIRSTR -name '*.js' -exec grep -HE "import[ a-zA-Z0-9/'.]*(yml|json)" {} \; | \
+  $SED -e "s/;$//g" -e "s/'$//g" -e "s/'//g" -e 's/:import//g' -e 's/.js//g' | \
+  $SORT | \
+  $UNIQ | \
+  $AWK '{n=split($1,a,"/"); m=split($(NF),b,"/"); if(a[n] != "") print "\t\t"a[n]" ..> "b[m];}' \
+  >> "${1}.puml"
+
+# HomePage ..> MainLandscapeContentContainer
+#	HomePage ..> ExtraLandscapeContentContainer
+# HomePage ..> SwitchButtonContainer
+# HomePage ..> ZoomButtonsContainer
+# HomePage ..> FullscreenButtonContainer
 
 # closing tag
 echo "}" >> "${1}.puml"
