@@ -1,0 +1,475 @@
+@startuml /home/thorsten/code/landscape/ruv/landscapeapp/src
+package src {
+	package types {
+		class index
+		}
+	package types {
+		class fields
+		}
+	class iframeResizer
+	package components {
+		class ResetFilters
+		}
+	package components {
+		class Grouping
+		}
+	package components {
+		class ComboboxMultiSelector
+		}
+	package components {
+		class ExportCsv
+		}
+	package components {
+		class Note
+		}
+	package components {
+		class PresetsContainer
+		}
+	package components {
+		class ExportCsvContainer
+		}
+	package components {
+		class GroupingTypeContainer
+		}
+	package components {
+		class TweetButton
+		}
+	package components {
+		class HomePageScrollerContainer
+		}
+	package components {
+		class LandscapeSelector
+		}
+	package components {
+		class InternalLink
+		}
+	package components {
+		class HomePageContainer
+		}
+	package components {
+		class SortFieldSelector
+		}
+	package components {
+		class Sorting
+		}
+	package components {
+		class DelayRender
+		}
+	package components {
+		class EmbeddedFooter
+		}
+	package components {
+		class RadioSelector
+		}
+	package components {
+		class Ad
+		}
+	package components {
+		class ComboboxSelector
+		}
+	package components {
+		class Footer
+		}
+	package components {
+		class HeadquartersFilterContainer
+		}
+	package components {
+		class ResetFiltersContainer
+		}
+	package components {
+		class OrganizationFilterContainer
+		}
+	package components {
+		class Root
+		}
+	package components {
+		class ItemDialogContent
+		}
+	package components {
+		class HomePage
+		}
+	package components {
+		class NotFoundPage
+		}
+	package components {
+		class SortFieldContainer
+		}
+	package components {
+		class TreeSelector
+		}
+	package components {
+		class Filters
+		}
+	package components {
+		class HeaderContainer
+		}
+	package components {
+		class ItemDialogButtonsContainer
+		}
+	package components {
+		class CheckboxSelector
+		}
+	package components {
+		class MainContent
+		}
+	package components {
+		class LicenseFilterContainer
+		}
+	package components {
+		class Presets
+		}
+	package components {
+		class HomePageUrlContainer
+		}
+	package components {
+		class LandscapeFilterContainer
+		}
+	package components {
+		class CustomAutoSizer
+		}
+	package components {
+		class App
+		}
+	package components {
+		class Summary
+		}
+	package components {
+		class Header
+		}
+	package components {
+		class ProjectFilterContainer
+		}
+	package components {
+		class ItemDialog
+		}
+	package components {
+		class MainContentContainer
+		}
+	package components {
+		class GroupingSelector
+		}
+	package components {
+		class ItemDialogContainer
+		}
+	package components {
+		package BigPicture {
+			class FullscreenLandscape
+			}
+	package components {
+		package BigPicture {
+			class ZoomButtonsContainer
+			}
+	package components {
+		package BigPicture {
+			class ExtraLandscapeContentContainer
+			}
+	package components {
+		package BigPicture {
+			class LandscapeInfo
+			}
+	package components {
+		package BigPicture {
+			class FullscreenButton
+			}
+	package components {
+		package BigPicture {
+			class OtherLandscapeLink
+			}
+	package components {
+		package BigPicture {
+			class Zoom
+			}
+	package components {
+		package BigPicture {
+			class SwitchButton
+			}
+	package components {
+		package BigPicture {
+			class ZoomContainer
+			}
+	package components {
+		package BigPicture {
+			class MainFullscreenLandscapeContainer
+			}
+	package components {
+		package BigPicture {
+			class SwitchButtonContainer
+			}
+	package components {
+		package BigPicture {
+			class ZoomButtons
+			}
+	package components {
+		package BigPicture {
+			class FullscreenButtonContainer
+			}
+	package components {
+		package BigPicture {
+			class index
+			}
+	package components {
+		package BigPicture {
+			class ExtraFullscreenLandscapeContainer
+			}
+	package components {
+		package BigPicture {
+			class Elements
+			}
+	package components {
+		package BigPicture {
+			class LandscapeContent
+			}
+	package components {
+		package BigPicture {
+			class MainLandscapeContentContainer
+			}
+	package components {
+		class ItemDialogButtons
+		}
+	package components {
+		class OssFilterContainer
+		}
+	package components {
+		class SummaryContainer
+		}
+	package reducers {
+		class api
+		}
+	package reducers {
+		class bus
+		}
+	package reducers {
+		class mainReducer
+		}
+	package reducers {
+		class index
+		}
+	package utils {
+		class unpackArray
+		}
+	package utils {
+		class saneName
+		}
+	package utils {
+		class isDesktop
+		}
+	package utils {
+		class groupingLabel
+		}
+	package utils {
+		class groupingOrder
+		}
+	package utils {
+		class formatNumber
+		}
+	package utils {
+		class createSelector
+		}
+	package utils {
+		class summaryCalculator
+		}
+	package utils {
+		class itemsCalculator
+		}
+	package utils {
+		class isMobile
+		}
+	package utils {
+		class selectedItemCalculator
+		}
+	package utils {
+		class packArray
+		}
+	package utils {
+		class isEmbed
+		}
+	package utils {
+		class zoom
+		}
+	package utils {
+		class shortRepoName
+		}
+	package utils {
+		class isIphone
+		}
+	package utils {
+		class stringOrSpecial
+		}
+	package utils {
+		class formatAmount
+		}
+	package utils {
+		class csvExporter
+		}
+	package utils {
+		class formatCity
+		}
+	package utils {
+		class isGoogle
+		}
+	package utils {
+		class syncToUrl
+		}
+	class index
+	class webpack-public-path
+	package store {
+		class configureStore
+		}
+		fields ..> unpackArray
+		Grouping ..> GroupingTypeContainer
+		PresetsContainer ..> createSelector
+		PresetsContainer ..> Presets
+		PresetsContainer ..> syncToUrl
+		ExportCsvContainer ..> ExportCsv
+		GroupingTypeContainer ..> GroupingSelector
+		GroupingTypeContainer ..> fields
+		HomePageScrollerContainer ..> itemsCalculator
+		LandscapeSelector ..> TreeSelector
+		InternalLink ..> isEmbed
+		HomePageContainer ..> createSelector
+		HomePageContainer ..> HomePage
+		HomePageContainer ..> mainReducer
+		HomePageContainer ..> isEmbed
+		HomePageContainer ..> itemsCalculator
+		HomePageContainer ..> selectedItemCalculator
+		SortFieldSelector ..> ComboboxSelector
+		Sorting ..> SortFieldContainer
+		HeadquartersFilterContainer ..> TreeSelector
+		HeadquartersFilterContainer ..> fields
+		ResetFiltersContainer ..> ResetFilters
+		OrganizationFilterContainer ..> ComboboxMultiSelector
+		OrganizationFilterContainer ..> fields
+		Root ..> App
+		ItemDialogContent ..> syncToUrl
+		ItemDialogContent ..> formatNumber
+		ItemDialogContent ..> isMobile
+		ItemDialogContent ..> InternalLink
+		ItemDialogContent ..> fields
+		ItemDialogContent ..> isGoogle
+		ItemDialogContent ..> TweetButton
+		HomePage ..> Filters
+		HomePage ..> Grouping
+		HomePage ..> Sorting
+		HomePage ..> PresetsContainer
+		HomePage ..> Ad
+		HomePage ..> CustomAutoSizer
+		HomePage ..> TweetButton
+		HomePage ..> MainContentContainer
+		HomePage ..> HomePageUrlContainer
+		HomePage ..> HomePageScrollerContainer
+		HomePage ..> ResetFiltersContainer
+		HomePage ..> ItemDialogContainer
+		HomePage ..> ItemDialogButtonsContainer
+		HomePage ..> HeaderContainer
+		HomePage ..> SummaryContainer
+		HomePage ..> ExportCsvContainer
+		HomePage ..> Footer
+		HomePage ..> EmbeddedFooter
+		HomePage ..> isIphone
+		HomePage ..> isMobile
+		HomePage ..> isDesktop
+		HomePage ..> isGoogle
+		HomePage ..> bus
+		SortFieldContainer ..> SortFieldSelector
+		Filters ..> ProjectFilterContainer
+		Filters ..> LicenseFilterContainer
+		Filters ..> OrganizationFilterContainer
+		Filters ..> HeadquartersFilterContainer
+		Filters ..> LandscapeFilterContainer
+		Filters ..> fields
+		HeaderContainer ..> Header
+		ItemDialogButtonsContainer ..> createSelector
+		ItemDialogButtonsContainer ..> ItemDialogButtons
+		ItemDialogButtonsContainer ..> mainReducer
+		ItemDialogButtonsContainer ..> itemsCalculator
+		ItemDialogButtonsContainer ..> selectedItemCalculator
+		MainContent ..> InternalLink
+		MainContent ..> isEmbed
+		MainContent ..> isMobile
+		MainContent ..> DelayRender
+		MainContent ..> fields
+		LicenseFilterContainer ..> TreeSelector
+		LicenseFilterContainer ..> fields
+		HomePageUrlContainer ..> createSelector
+		HomePageUrlContainer ..> syncToUrl
+		HomePageUrlContainer ..> mainReducer
+		HomePageUrlContainer ..> configureStore
+		LandscapeFilterContainer ..> LandscapeSelector
+		LandscapeFilterContainer ..> fields
+		CustomAutoSizer ..> isMobile
+		App ..> HomePageContainer
+		App ..> NotFoundPage
+		Summary ..> formatNumber
+		ProjectFilterContainer ..> TreeSelector
+		ProjectFilterContainer ..> mainReducer
+		ProjectFilterContainer ..> fields
+		ItemDialog ..> ItemDialogContent
+		ItemDialog ..> ItemDialogButtonsContainer
+		ItemDialog ..> isIphone
+		ItemDialog ..> fields
+		MainContentContainer ..> MainContent
+		MainContentContainer ..> mainReducer
+		MainContentContainer ..> itemsCalculator
+		GroupingSelector ..> ComboboxSelector
+		ItemDialogContainer ..> createSelector
+		ItemDialogContainer ..> ItemDialog
+		ItemDialogContainer ..> mainReducer
+		ItemDialogContainer ..> itemsCalculator
+		ItemDialogContainer ..> selectedItemCalculator
+		FullscreenLandscape ..> LandscapeContent
+		FullscreenLandscape ..> HomePageUrlContainer
+		ZoomButtonsContainer ..> ZoomButtons
+		ExtraLandscapeContentContainer ..> LandscapeContent
+		SwitchButton ..> InternalLink
+		SwitchButton ..> TweetButton
+		ZoomContainer ..> Zoom
+		MainFullscreenLandscapeContainer ..> FullscreenLandscape
+		SwitchButtonContainer ..> SwitchButton
+		FullscreenButtonContainer ..> FullscreenButton
+		index ..> MainLandscapeContentContainer
+		index ..> ExtraLandscapeContentContainer
+		index ..> SwitchButtonContainer
+		index ..> ZoomContainer
+		index ..> ZoomButtonsContainer
+		index ..> MainFullscreenLandscapeContainer
+		index ..> ExtraFullscreenLandscapeContainer
+		index ..> FullscreenButtonContainer
+		ExtraFullscreenLandscapeContainer ..> FullscreenLandscape
+		Elements ..> InternalLink
+		LandscapeContent ..> Elements
+		LandscapeContent ..> LandscapeInfo
+		LandscapeContent ..> OtherLandscapeLink
+		MainLandscapeContentContainer ..> LandscapeContent
+		OssFilterContainer ..> ComboboxSelector
+		OssFilterContainer ..> fields
+		SummaryContainer ..> Summary
+		SummaryContainer ..> summaryCalculator
+		api ..> unpackArray
+		mainReducer ..> api
+		mainReducer ..> syncToUrl
+		mainReducer ..> zoom
+		mainReducer ..> bus
+		mainReducer ..> itemsCalculator
+		mainReducer ..> csvExporter
+		index ..> mainReducer
+		groupingLabel ..> fields
+		groupingOrder ..> fields
+		summaryCalculator ..> createSelector
+		summaryCalculator ..> itemsCalculator
+		itemsCalculator ..> createSelector
+		itemsCalculator ..> fields
+		itemsCalculator ..> groupingLabel
+		itemsCalculator ..> groupingOrder
+		itemsCalculator ..> formatAmount
+		itemsCalculator ..> syncToUrl
+		itemsCalculator ..> stringOrSpecial
+		syncToUrl ..> mainReducer
+		syncToUrl ..> fields
+		syncToUrl ..> SortFieldContainer
+		syncToUrl ..> isEmbed
+		index ..> configureStore
+		index ..> Root
+		index ..> isIphone
+		configureStore ..> reducers
+}
+@enduml

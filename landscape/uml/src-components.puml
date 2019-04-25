@@ -8,7 +8,9 @@ package "components"  {
     class HomePageContainer
     class PresetsContainer
     class Sorting
-    
+    class TweetButton
+    class xxx
+
     package "BigPicture" {
         class MainLandscapeContentContainer
         class ExtraLandscapeContentContainer
@@ -26,9 +28,10 @@ package "components"  {
     HomePage --> Sorting
     HomePage --> MainLandscapeContentContainer
     HomePage --> ExtraLandscapeContentContainer
-    SwitchHomePage --> ButtonContainer
+    HomePage --> SwitchButtonContainer
     HomePage --> ZoomButtonsContainer
     HomePage --> FullscreenButtonContainer
+    HomePage --> TweetButton
 }
 
 @enduml

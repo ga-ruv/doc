@@ -1,0 +1,141 @@
+@startuml /home/thorsten/code/landscape/ruv/landscapeapp/tools
+package tools {
+	class fundingHistoryData
+	class yaml
+	class checkLinks
+	class retry
+	class sitemap
+	class testGithub
+	class renderLandscape
+	class validateLandscapeKeys
+	class reportToSlackTest
+	class fundingForMasterBranch
+	class chalkConfig
+	class srcServer
+	class addRobots
+	class testCi
+	class reportToSlack
+	class analyzeBundle
+	class fetchGithubStartDate
+	class fetchImages
+	class startMessage
+	class fetchGithubStats
+	class testCropFrame
+	class autocropImages
+	class removeQuotes
+	class actualTwitter
+	class hostImages
+	class setupServer
+	class twitterClient
+	class twitter
+	class distServer
+	class progressReporter
+	class calculateNumberOfTweets
+	class githubDates
+	class removeUnusedHostedLogos
+	class getRepositoryInfo
+	class rpRetry
+	class crunchbase
+	class reporter
+	class addExternalInfo
+	class debugCheckLinks
+	class fileMock
+	class fetchBestPractices
+	class ciServer
+	class assetsTransformer
+	class rpRetryTest
+	class ensureHttps
+	class checkLandscape
+	class settings
+	class generateJson
+	class fatalErrors
+	class build
+	class fundingHistoryPage
+		checkLinks ..> retry
+		checkLinks ..> settings
+		sitemap ..> settings
+		testGithub ..> githubDates
+		renderLandscape ..> settings
+		validateLandscapeKeys ..> settings
+		srcServer ..> settings
+		fetchGithubStartDate ..> fatalErrors
+		fetchGithubStartDate ..> settings
+		fetchGithubStartDate ..> reporter
+		fetchGithubStartDate ..> getRepositoryInfo
+		fetchGithubStartDate ..> progressReporter
+		fetchGithubStartDate ..> githubDates
+		fetchImages ..> fatalErrors
+		fetchImages ..> rpRetry
+		fetchImages ..> saneName
+		fetchImages ..> settings
+		fetchImages ..> progressReporter
+		fetchImages ..> reporter
+		startMessage ..> chalkConfig
+		fetchGithubStats ..> fatalErrors
+		fetchGithubStats ..> rpRetry
+		fetchGithubStats ..> reporter
+		fetchGithubStats ..> settings
+		fetchGithubStats ..> progressReporter
+		fetchGithubStats ..> shortRepoName
+		fetchGithubStats ..> getRepositoryInfo
+		fetchGithubStats ..> githubDates
+		testCropFrame ..> processSvg
+		autocropImages ..> settings
+		removeQuotes ..> settings
+		removeQuotes ..> yaml
+		hostImages ..> settings
+		hostImages ..> fetchImages
+		hostImages ..> yaml
+		setupServer ..> settings
+		twitter ..> fatalErrors
+		twitter ..> settings
+		twitter ..> reporter
+		twitter ..> actualTwitter
+		twitter ..> twitterClient
+		twitter ..> retry
+		twitter ..> progressReporter
+		distServer ..> chalkConfig
+		distServer ..> settings
+		calculateNumberOfTweets ..> twitterClient
+		calculateNumberOfTweets ..> settings
+		calculateNumberOfTweets ..> yaml
+		githubDates ..> rpRetry
+		removeUnusedHostedLogos ..> settings
+		getRepositoryInfo ..> shortRepoName
+		getRepositoryInfo ..> rpRetry
+		rpRetry ..> retry
+		crunchbase ..> fatalErrors
+		crunchbase ..> ensureHttps
+		crunchbase ..> reporter
+		crunchbase ..> settings
+		crunchbase ..> progressReporter
+		addExternalInfo ..> fatalErrors
+		addExternalInfo ..> settings
+		addExternalInfo ..> actualTwitter
+		addExternalInfo ..> yaml
+		 ..> formatCity
+		addExternalInfo ..> fetchImages
+		addExternalInfo ..> crunchbase
+		addExternalInfo ..> fetchGithubStats
+		addExternalInfo ..> fetchGithubStartDate
+		addExternalInfo ..> twitter
+		addExternalInfo ..> fetchBestPractices
+		addExternalInfo ..> shortRepoName
+		debugCheckLinks ..> checkLinks
+		fetchBestPractices ..> fatalErrors
+		fetchBestPractices ..> retry
+		fetchBestPractices ..> reporter
+		fetchBestPractices ..> settings
+		fetchBestPractices ..> progressReporter
+		ciServer ..> chalkConfig
+		ciServer ..> settings
+		rpRetryTest ..> rpRetry
+		checkLandscape ..> settings
+		generateJson ..> settings
+		generateJson ..> actualTwitter
+		generateJson ..> saneName
+		generateJson ..> formatCity
+		generateJson ..> packArray
+		build ..> chalkConfig
+}
+@enduml
