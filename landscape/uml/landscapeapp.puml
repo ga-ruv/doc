@@ -1,709 +1,201 @@
 @startuml /home/thorsten/code/landscape/ruv/landscapeapp
 left to right direction
 header R+V Anwendungslandschaft
-scale max 1700*1200
+
 allow_mixing
+
 node fromon2csv {
 	node lib {
 		database JSON2CSVParser
 	}
 }		
+
 node project {
 		database lookupon
 		database previewon
 		database settings.yml
 }
+
 node landscapeapp {
+	class webpack.config.prod
+	class webpack.config.dev
+	
 	package tools {
 		class fundingHistoryData
-		}
-	package tools {
 		class yaml
-		}
-	package tools {
 		class checkLinks
-		}
-	package tools {
 		class retry
-		}
-	package tools {
 		class sitemap
-		}
-	package tools {
 		class testGithub
-		}
-	package tools {
 		class renderLandscape
-		}
-	package tools {
 		class validateLandscapeKeys
-		}
-	package tools {
 		class reportToSlackTest
-		}
-	package tools {
 		class fundingForMasterBranch
-		}
-	package tools {
 		class chalkConfig
-		}
-	package tools {
 		class srcServer
-		}
-	package tools {
 		class addRobots
-		}
-	package tools {
 		class testCi
-		}
-	package tools {
 		class reportToSlack
-		}
-	package tools {
 		class analyzeBundle
-		}
-	package tools {
 		class fetchGithubStartDate
-		}
-	package tools {
 		class fetchImages
-		}
-	package tools {
 		class startMessage
-		}
-	package tools {
 		class fetchGithubStats
-		}
-	package tools {
 		class testCropFrame
-		}
-	package tools {
 		class autocropImages
-		}
-	package tools {
 		class removeQuotes
-		}
-	package tools {
 		class actualTwitter
-		}
-	package tools {
 		class hostImages
-		}
-	package tools {
 		class setupServer
-		}
-	package tools {
 		class twitterClient
-		}
-	package tools {
 		class twitter
-		}
-	package tools {
 		class distServer
-		}
-	package tools {
 		class progressReporter
-		}
-	package tools {
 		class calculateNumberOfTweets
-		}
-	package tools {
 		class githubDates
-		}
-	package tools {
 		class removeUnusedHostedLogos
-		}
-	package tools {
 		class getRepositoryInfo
-		}
-	package tools {
 		class rpRetry
-		}
-	package tools {
 		class crunchbase
-		}
-	package tools {
 		class reporter
-		}
-	package tools {
 		class addExternalInfo
-		}
-	package tools {
 		class debugCheckLinks
-		}
-	package tools {
 		class fileMock
-		}
-	package tools {
 		class fetchBestPractices
-		}
-	package tools {
 		class ciServer
-		}
-	package tools {
 		class assetsTransformer
-		}
-	package tools {
 		class rpRetryTest
-		}
-	package tools {
 		class ensureHttps
-		}
-	package tools {
 		class checkLandscape
-		}
-	package tools {
 		class settings
-		}
-	package tools {
 		class generateJson
-		}
-	package tools {
 		class fatalErrors
-		}
-	package tools {
 		class build
-		}
-	package tools {
 		class fundingHistoryPage
-		}
-	class webpack.config.prod
-	package src {
-		package types {
-			class index
-			}
 	}
-	package src {
-		package types {
-			class fields
-			}
-	}
+	
 	package src {
 		class iframeResizer
-	}
-	package src {
-		package components {
-			class ResetFilters
+		class index
+		class webpack-public-path
+	
+		package types {
+			class index
+			class fields
 		}
-	}
-	package src {
+	
 		package components {
 			class Grouping
-		}
-	}
-	package src {
-		package components {
 			class ComboboxMultiSelector
-		}
-	}
-	package src {
-		package components {
 			class ExportCsv
-			}
-			}
-	package src {
-		package components {
 			class Note
-			}
-			}
-	package src {
-		package components {
 			class PresetsContainer
-			}
-			}
-	package src {
-		package components {
 			class ExportCsvContainer
-			}
-			}
-	package src {
-		package components {
 			class GroupingTypeContainer
-			}
-			}
-	package src {
-		package components {
 			class TweetButton
-			}
-			}
-	package src {
-		package components {
 			class HomePageScrollerContainer
-			}
-			}
-	package src {
-		package components {
 			class LandscapeSelector
-			}
-			}
-	package src {
-		package components {
 			class InternalLink
-			}
-			}
-	package src {
-		package components {
 			class HomePageContainer
-			}
-			}
-	package src {
-		package components {
 			class SortFieldSelector
-			}
-			}
-	package src {
-		package components {
 			class Sorting
-			}
-			}
-	package src {
-		package components {
 			class DelayRender
-			}
-			}
-	package src {
-		package components {
 			class EmbeddedFooter
-			}
-			}
-	package src {
-		package components {
 			class RadioSelector
-			}
-			}
-	package src {
-		package components {
 			class Ad
-			}
-			}
-	package src {
-		package components {
 			class ComboboxSelector
-			}
-			}
-	package src {
-		package components {
 			class Footer
-			}
-			}
-	package src {
-		package components {
 			class HeadquartersFilterContainer
-			}
-			}
-	package src {
-		package components {
 			class ResetFiltersContainer
-			}
-			}
-	package src {
-		package components {
 			class OrganizationFilterContainer
-			}
-			}
-	package src {
-		package components {
 			class Root
-			}
-			}
-	package src {
-		package components {
 			class ItemDialogContent
-			}
-			}
-	package src {
-		package components {
 			class HomePage
-			}
-			}
-	package src {
-		package components {
 			class NotFoundPage
-			}
-			}
-	package src {
-		package components {
 			class SortFieldContainer
-			}
-			}
-	package src {
-		package components {
 			class TreeSelector
-			}
-			}
-	package src {
-		package components {
 			class Filters
-			}
-			}
-	package src {
-		package components {
 			class HeaderContainer
-			}
-			}
-	package src {
-		package components {
 			class ItemDialogButtonsContainer
-			}
-			}
-	package src {
-		package components {
 			class CheckboxSelector
-			}
-			}
-	package src {
-		package components {
 			class MainContent
-			}
-			}
-	package src {
-		package components {
 			class LicenseFilterContainer
-			}
-			}
-	package src {
-		package components {
 			class Presets
-			}
-			}
-	package src {
-		package components {
 			class HomePageUrlContainer
-			}
-			}
-	package src {
-		package components {
 			class LandscapeFilterContainer
-			}
-			}
-	package src {
-		package components {
 			class CustomAutoSizer
-			}
-			}
-	package src {
-		package components {
 			class App
-			}
-			}
-	package src {
-		package components {
 			class Summary
-			}
-			}
-	package src {
-		package components {
 			class Header
-			}
-			}
-	package src {
-		package components {
 			class ProjectFilterContainer
-			}
-			}
-	package src {
-		package components {
 			class ItemDialog
-			}
-			}
-	package src {
-		package components {
 			class MainContentContainer
-			}
-			}
-	package src {
-		package components {
 			class GroupingSelector
-			}
-			}
-	package src {
-		package components {
 			class ItemDialogContainer
-			}
-			}
-	package src {
-		package components {
+			class ItemDialogButtons
+			class OssFilterContainer
+			class SummaryContainer
+
 			package BigPicture {
 				class FullscreenLandscape
-				}
-				}
-				}
-	package src {
-		package components {
-			package BigPicture {
 				class ZoomButtonsContainer
-				}
-				}
-				}
-	package src {
-		package components {
-			package BigPicture {
 				class ExtraLandscapeContentContainer
-				}
-				}
-				}
-	package src {
-		package components {
-			package BigPicture {
 				class LandscapeInfo
-				}
-				}
-				}
-	package src {
-		package components {
-			package BigPicture {
 				class FullscreenButton
-				}
-				}
-				}
-	package src {
-		package components {
-			package BigPicture {
 				class OtherLandscapeLink
-				}
-				}
-				}
-	package src {
-		package components {
-			package BigPicture {
 				class Zoom
-				}
-				}
-				}
-	package src {
-		package components {
-			package BigPicture {
 				class SwitchButton
-				}
-				}
-				}
-	package src {
-		package components {
-			package BigPicture {
 				class ZoomContainer
-				}
-				}
-				}
-	package src {
-		package components {
-			package BigPicture {
 				class MainFullscreenLandscapeContainer
-				}
-				}
-				}
-	package src {
-		package components {
-			package BigPicture {
 				class SwitchButtonContainer
-				}
-				}
-				}
-	package src {
-		package components {
-			package BigPicture {
 				class ZoomButtons
-				}
-				}
-				}
-	package src {
-		package components {
-			package BigPicture {
 				class FullscreenButtonContainer
-				}
-				}
-				}
-	package src {
-		package components {
-			package BigPicture {
 				class index
-				}
-				}
-				}
-	package src {
-		package components {
-			package BigPicture {
 				class ExtraFullscreenLandscapeContainer
-				}
-				}
-				}
-	package src {
-		package components {
-			package BigPicture {
 				class Elements
-				}
-				}
-				}
-	package src {
-		package components {
-			package BigPicture {
 				class LandscapeContent
-				}
-				}
-				}
-	package src {
-		package components {
-			package BigPicture {
 				class MainLandscapeContentContainer
-				}
-				}
-				}
-	package src {
-		package components {
-			class ItemDialogButtons
-			}
-			}
-	package src {
-		package components {
-			class OssFilterContainer
-			}
-			}
-	package src {
-		package components {
-			class SummaryContainer
-			}
-			}
-	package src {
+			}			
+		}
+		
 		package reducers {
 			class api
-			}
-			}
-	package src {
-		package reducers {
 			class bus
-			}
-			}
-	package src {
-		package reducers {
 			class mainReducer
-			}
-			}
-	package src {
-		package reducers {
 			class index
-			}
-			}
-	package src {
+		}
+
 		package utils {
 			class unpackArray
-			}
-			}
-	package src {
-		package utils {
 			class saneName
-			}
-			}
-	package src {
-		package utils {
 			class isDesktop
-			}
-			}
-	package src {
-		package utils {
 			class groupingLabel
-			}
-			}
-	package src {
-		package utils {
 			class groupingOrder
-			}
-			}
-	package src {
-		package utils {
 			class formatNumber
-			}
-			}
-	package src {
-		package utils {
 			class createSelector
-			}
-			}
-	package src {
-		package utils {
 			class summaryCalculator
-			}
-			}
-	package src {
-		package utils {
 			class itemsCalculator
-			}
-			}
-	package src {
-		package utils {
 			class isMobile
-			}
-			}
-	package src {
-		package utils {
 			class selectedItemCalculator
-			}
-			}
-	package src {
-		package utils {
 			class packArray
-			}
-			}
-	package src {
-		package utils {
 			class isEmbed
-			}
-			}
-	package src {
-		package utils {
 			class zoom
-			}
-			}
-	package src {
-		package utils {
 			class shortRepoName
-			}
-			}
-	package src {
-		package utils {
 			class isIphone
-			}
-			}
-	package src {
-		package utils {
 			class stringOrSpecial
-			}
-			}
-	package src {
-		package utils {
 			class formatAmount
-			}
-			}
-	package src {
-		package utils {
 			class csvExporter
-			}
-			}
-	package src {
-		package utils {
 			class formatCity
-			}
-			}
-	package src {
-		package utils {
 			class isGoogle
-			}
-			}
-	package src {
-		package utils {
 			class syncToUrl
-			}
-			}
-	package src {
-		class index
 		}
-	package src {
-		class webpack-public-path
-		}
-	package src {
+	
 		package store {
 			class configureStore
-			}
-			}
-	class webpack.config.dev
+		}
+	}
+	
+	
 	checkLinks ..> retry
 	checkLinks ..> settings
 	sitemap ..> settings
