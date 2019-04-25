@@ -72,7 +72,7 @@ $FIND . $EXDIRSTR -name '*.js' -print | \
 #   ...
 # }
 $FIND . $EXDIRSTR -name '*.js' -exec grep -H 'import*' {} \; | \
-  $GREP -E "*from '[.]+/[.a-zA-Z0-9/]*';[\w]*$" | \
+  $GREP -E "*from '[.]+/[\.a-zA-Z0-9/]*';[\w]*$" | \
   $SED 's/^[.\/]*/ /g' | \
   $SED 's/:import//g' | \
   $SED 's/^ //g' | \
