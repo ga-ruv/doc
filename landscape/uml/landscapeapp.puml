@@ -472,6 +472,8 @@ node landscapeapp {
 	configureStore ..> reducers
 	webpack.config.dev ..> settings
 
+	settings --> settings.yml
+
 	Ad .. settings.yml
 	App .. settings.yml
 	ExtraFullscreenLandscapeContainer .. settings.yml

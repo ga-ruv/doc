@@ -11,6 +11,56 @@ node "landscape app project" {
         class "HomePageContainer"
         class "NotFoundPage"
         class "Root"
+        class Filters
+       	class Grouping
+       	class Sorting
+       	class PresetsContainer
+       	class Ad
+       	class CustomAutoSizer
+       	class TweetButton
+       	class MainContentContainer
+       	class HomePageUrlContainer
+       	class HomePageScrollerContainer
+       	class ResetFiltersContainer
+       	class ItemDialogContainer
+       	class ItemDialogButtonsContainer
+       	class HeaderContainer
+       	class SummaryContainer
+       	class ExportCsvContainer
+       	class Footer
+       	class EmbeddedFooter
+
+        package BigPicture {
+            class MainLandscapeContentContainer
+            class ExtraLandscapeContentContainer
+            class SwitchButtonContainer
+            class ZoomButtonsContainer
+            class FullscreenButtonContainer
+        }
+
+        HomePage ..> Filters
+       	HomePage ..> Grouping
+       	HomePage ..> Sorting
+       	HomePage ..> PresetsContainer
+       	HomePage ..> Ad
+       	HomePage ..> CustomAutoSizer
+       	HomePage ..> TweetButton
+       	HomePage ..> MainContentContainer
+       	HomePage ..> HomePageUrlContainer
+       	HomePage ..> HomePageScrollerContainer
+       	HomePage ..> ResetFiltersContainer
+       	HomePage ..> ItemDialogContainer
+       	HomePage ..> ItemDialogButtonsContainer
+       	HomePage ..> HeaderContainer
+       	HomePage ..> SummaryContainer
+       	HomePage ..> ExportCsvContainer
+       	HomePage ..> Footer
+       	HomePage ..> EmbeddedFooter
+       	HomePage ..> MainLandscapeContentContainer
+       	HomePage ..> ExtraLandscapeContentContainer
+       	HomePage ..> SwitchButtonContainer
+       	HomePage ..> ZoomButtonsContainer
+       	HomePage ..> FullscreenButtonContainer
 
         Root --> App
         App --> HomePageContainer
@@ -64,6 +114,13 @@ node "landscape app project" {
     HomePageContainer --> isEmbed
     HomePageContainer --> itemsCalculator
     HomePageContainer --> selectedItemCalculator
+
+   	HomePage ..> isIphone
+   	HomePage ..> isMobile
+   	HomePage ..> isDesktop
+   	HomePage ..> isGoogle
+   	HomePage ..> bus
+    
 }
 
 node "landscape project" {
