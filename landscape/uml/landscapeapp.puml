@@ -726,6 +726,11 @@ package landscapeapp {
 		HomePage ..> isDesktop
 		HomePage ..> isGoogle
 		HomePage ..> bus
+		HomePage ..> MainLandscapeContentContainer
+  		HomePage ..> ExtraLandscapeContentContainer
+  		HomePage ..> SwitchButtonContainer
+  		HomePage ..> ZoomButtonsContainer
+  		HomePage ..> FullscreenButtonContainer
 		SortFieldContainer ..> SortFieldSelector
 		SortFieldContainer ..> mainReducer
 		Filters ..> ProjectFilterContainer
