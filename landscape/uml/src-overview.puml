@@ -1,7 +1,7 @@
 @startuml R+V Anwendungslandschaft ./src/
 'allow_mixing
 left to right direction
-scale max 900*900
+scale max 1700*1200
 header R+V Anwendungslandschaft ./src/
 
 node "landscape app project" {
