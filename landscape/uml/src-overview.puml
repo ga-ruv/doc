@@ -125,11 +125,11 @@ node "landscape app project" {
     HomePageContainer --> itemsCalculator
     HomePageContainer --> selectedItemCalculator
 
-   	HomePage ..> isIphone
-   	HomePage ..> isMobile
-   	HomePage ..> isDesktop
-   	HomePage ..> isGoogle
-   	HomePage ..> bus
+   	HomePage --> isIphone
+   	HomePage --> isMobile
+   	HomePage --> isDesktop
+   	HomePage --> isGoogle
+   	HomePage --> bus
     
 }
 
