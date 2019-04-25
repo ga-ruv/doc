@@ -38,29 +38,29 @@ node "landscape app project" {
             class FullscreenButtonContainer
         }
 
-        HomePage ..> Filters
-       	HomePage ..> Grouping
-       	HomePage ..> Sorting
-       	HomePage ..> PresetsContainer
-       	HomePage ..> Ad
-       	HomePage ..> CustomAutoSizer
-       	HomePage ..> TweetButton
-       	HomePage ..> MainContentContainer
-       	HomePage ..> HomePageUrlContainer
-       	HomePage ..> HomePageScrollerContainer
-       	HomePage ..> ResetFiltersContainer
-       	HomePage ..> ItemDialogContainer
-       	HomePage ..> ItemDialogButtonsContainer
-       	HomePage ..> HeaderContainer
-       	HomePage ..> SummaryContainer
-       	HomePage ..> ExportCsvContainer
-       	HomePage ..> Footer
-       	HomePage ..> EmbeddedFooter
-       	HomePage ..> MainLandscapeContentContainer
-       	HomePage ..> ExtraLandscapeContentContainer
-       	HomePage ..> SwitchButtonContainer
-       	HomePage ..> ZoomButtonsContainer
-       	HomePage ..> FullscreenButtonContainer
+        HomePage --> Filters
+       	HomePage --> Grouping
+       	HomePage --> Sorting
+       	HomePage --> PresetsContainer
+       	HomePage --> Ad
+       	HomePage --> CustomAutoSizer
+       	HomePage --> TweetButton
+       	HomePage --> MainContentContainer
+       	HomePage --> HomePageUrlContainer
+       	HomePage --> HomePageScrollerContainer
+       	HomePage --> ResetFiltersContainer
+       	HomePage --> ItemDialogContainer
+       	HomePage --> ItemDialogButtonsContainer
+       	HomePage --> HeaderContainer
+       	HomePage --> SummaryContainer
+       	HomePage --> ExportCsvContainer
+       	HomePage --> Footer
+       	HomePage --> EmbeddedFooter
+       	HomePage --> MainLandscapeContentContainer
+       	HomePage --> ExtraLandscapeContentContainer
+       	HomePage --> SwitchButtonContainer
+       	HomePage --> ZoomButtonsContainer
+       	HomePage --> FullscreenButtonContainer
 
         Root --> App
         App --> HomePageContainer
@@ -73,6 +73,7 @@ node "landscape app project" {
     }
     package "images" {
     }
+
     package "reducers" {
         class "api"
         class "bus"
@@ -80,19 +81,28 @@ node "landscape app project" {
         class "mainReducer"
         index --> mainReducer
     }
+
     package "store" {
         class "configureStore"
     }
+    
     package "styles" {
         class "theme" 
     }
+
     package "types" {
+        class index
+		class fields
     }
+
     package "utils" {
         class "createSelector"
         class "csvExporter"
         class "isEmbed"
         class "isIphone"
+        class "isMobile"
+        class "isDesktop"
+        class "isGoogle"
         class "itemsCalculator"
         class "selectedItemCalculator"
         class "syncToUrl"
